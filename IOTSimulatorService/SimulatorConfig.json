@@ -1,0 +1,218 @@
+﻿{
+  "MQTTBrokerConfig": {
+    //"HostName": "iotgatewaybroker.industryapps.net",
+    //"Port": "2883",
+    //"UserName": "uatuser",
+    //"Password": "uatuser@iapps",
+    //"ClientID": "Simulator01"
+    "HostName": "natsbroker.fliplabs.net",
+    "Port": "2887",
+    "UserName": "iappsadmin",
+    "Password": "iapps@123",
+    "ClientID": "Simulator01"
+  },
+  "TimeIntervals": [
+    {
+      "TimeDuration": "1000", //milleseconds
+      "DependedTopic": false,
+      "Topics": [
+        {
+          "Temp": "80",
+          "Min": "80",
+          "Max": "100",
+          "RunAlone": false,
+          "IsRunning": false,
+          "Tags": [
+            "iapps/uat/company1/plant1/SMC01_ToolTemperature",
+            "iapps/uat/company1/plant1/SMC01_ToolTemperature",
+            "iapps/uat/company1/plant1/VTB01_MachineTemperature",
+            "iapps/uat/company1/plant1/EF01_EnviromentalHumidity",
+            "iapps/uat/company1/plant1/DM01_EnviromentalHumidity",
+            "iapps/uat/company1/plant1/DM03_EnviromentalHumidity",
+            "iapps/uat/company1/plant1/SBM01_MachineTemperature",
+            "iapps/uat/company1/plant1/IMM01_MachineTemperature",
+            "iapps/uat/company1/plant1/TM01_MachineTemperature",
+            "iapps/uat/company1/plant1/T02_ToolTemperature",
+            "iapps/uat/company1/plant1/T03_ToolTemperature",
+            "iapps/uat/company1/plant1/T05_ToolTemperature",
+            "iapps/uat/company1/plant1/T07_ToolTemperature",
+            "iapps/uat/company1/plant1/T10_ToolTemperature",
+            "iapps/uat/company1/plant1/T04_ToolHumidity"
+          ]
+        },
+        {
+          "Temp": "20",
+          "Min": "20",
+          "Max": "25",
+          "RunAlone": false,
+          "IsRunning": false,
+          "Tags": [
+            "iapps/uat/company1/plant1/SCD01_EnviromentalTemperature",
+            "iapps/uat/company1/plant1/ZD01_EnviromentalTemperature",
+            "iapps/uat/company1/plant1/YT01_EnviromentalTemperature",
+            "iapps/uat/company1/plant1/IG01_EnviromentalTemperature",
+            "iapps/uat/company1/plant1/LWS01_EnviromentalTemperature"
+          ]
+        },
+        {
+          "Temp": "250",
+          "Min": "250",
+          "Max": "400",
+          "RunAlone": false,
+          "IsRunning": false,
+          "Tags": [ "iapps/uat/company1/plant1/ZD01_CO2level" ]
+        },
+        {
+          "Temp": "100",
+          "Min": "100",
+          "Max": "120",
+          "RunAlone": false,
+          "IsRunning": false,
+          "Tags": [
+            "iapps/uat/company1/plant1/NT01_FlowRate",
+            "iapps/uat/company1/plant1/T06_Vibration"
+          ]
+        },
+        {
+          "Temp": "50",
+          "Min": "50",
+          "Max": "500",
+          "RunAlone": false,
+          "IsRunning": false,
+          "Tags": [
+            "iapps/uat/company1/plant1/DM02_Pressure",
+            "iapps/uat/company1/plant1/T08_Pressure",
+            "iapps/uat/company1/plant1/T09_Pressure"
+          ]
+        },
+        {
+          "Temp": "20",
+          "Min": "20",
+          "Max": "5000",
+          "RunAlone": false,
+          "IsRunning": false,
+          "Tags": [ "iapps/uat/company1/plant1/T01_Torque" ]
+        }
+      ]
+    },
+    {
+      /*  */
+      "TimeDuration": "2000", //milleseconds
+      "DependedTopic": false,
+      "Topics": [
+        {
+          "Temp": "1200",
+          "Min": "1200",
+          "Max": "1500",
+          "RunAlone": false,
+          "IsRunning": false,
+          "Tags": [ "iapps/uat/company1/plant1/SRM01_RPM" ]
+        },
+        {
+          "Temp": "10",
+          "Min": "10",
+          "Max": "100",
+          "RunAlone": false,
+          "IsRunning": false,
+          "Tags": [ "iapps/uat/company1/plant1/DM03_speed" ]
+        }
+      ]
+    },
+    {
+      "TimeDuration": "3000", //milleseconds
+      "DependedTopic": false,
+      "Topics": [
+        {
+          "Temp": "0",
+          "Min": "0",
+          "Max": "0",
+          "RunAlone": false,
+          "IsRunning": false,
+          "Tags": [
+            "iapps/uat/company1/plant1/DM01_CurrentProductCode",
+            "iapps/uat/company1/plant1/SM01_CurrentProductCode",
+            "iapps/uat/company1/plant1/SRM01_CurrentProductCode"
+          ],
+          "Values": [
+            "NT01",
+            "ZD01",
+            "YT01",
+            "EF01",
+            "VTB01"
+          ]
+        }
+      ]
+    },
+    {
+      "TimeDuration": "3000", //milleseconds
+      "DependedTopic": true,
+      "Topics": [
+        {
+          "Temp": "0",
+          "Min": "30",
+          "Max": "200",
+          "RunAlone": true,
+          "IsRunning": false,
+          "Step": "0",
+          "Tags": [
+            "iapps/uat/company1/plant1/DM01_DowntimeReasonCode",
+            "iapps/uat/company1/plant1/SM01_DowntimeReasonCode",
+            "iapps/uat/company1/plant1/SRM01_DowntimeReasonCode"
+          ],
+          "Values": [
+            "MAINT01",
+            "CHANG01",
+            "POWER01",
+            "HOLIDAY01"
+          ]
+        },
+        {
+          "Temp": "0",
+          "Min": "0",
+          "Max": "5000",
+          "RunAlone": false,
+          "IsRunning": false,
+          "Tags": [
+            "iapps/uat/company1/plant1/DM01_Machinecounter",
+            "iapps/uat/company1/plant1/SMC01_Machinecounter",
+            "iapps/uat/company1/plant1/SRM01_MachineCounter",
+            "iapps/uat/company1/plant1/SM01_Machinecounter"
+          ]
+        },
+        {
+          "Temp": "0",
+          "Min": "0",
+          "Max": "5000",
+          "RunAlone": false,
+          "IsRunning": false,
+          "Tags": [
+            "iapps/uat/company1/plant1/DM01_ScrapCount",
+            "iapps/uat/company1/plant1/SMC01_ScrapCount",
+            "iapps/uat/company1/plant1/SRM01_ScrapCount",
+            "iapps/uat/company1/plant1/SM01_ScrapCount"
+          ]
+        },
+        {
+          "Temp": "0",
+          "Min": "0",
+          "Max": "5000",
+          "RunAlone": false,
+          "IsRunning": false,
+          "Tags": [
+            "iapps/uat/company1/plant1/DM01_ScrapReason",
+            "iapps/uat/company1/plant1/SMC01_ScrapReason",
+            "iapps/uat/company1/plant1/SRM01_ScrapReason",
+            "iapps/uat/company1/plant1/SM01_ScrapReason"
+          ],
+          "Values": [
+            "CORNER01",
+            "SMOOTH01",
+            "POLYSH01",
+            "CUT01",
+            "BROKEN01"
+          ]
+        }
+      ]
+    }
+  ]
+}
